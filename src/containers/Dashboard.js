@@ -7,7 +7,6 @@ import { push } from 'react-router-redux'
 class Dashboard extends Component {
 
   handleClick(id, e) {
-  	console.log(id);
   	this.props.dispatch(toggleHero(id))
     this.props.dispatch(push('/heroes/edit'));
   } 
