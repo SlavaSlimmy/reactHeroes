@@ -14,15 +14,17 @@ class Dashboard extends Component {
 	render() {
 		const { heroes } = this.props
 		return (
-		  <div>
-		    <h3>Top Heroes</h3>
-		    <div className="grid grid-pad">
+		  <div className="dashboard">
+		    <h2>Top Heroes</h2>
+		    <div className="row">
 		          {heroes.allIds.map(id =>
-					<button key={id} className="col-1-4" onClick={(e)=>this.handleClick(id, e)}>
-					    <div className="module hero">
-					      <h4 >{heroes.byId[id].name}</h4>
-					    </div>
-				  	</button>
+		          	<div className="col-md-3">
+						<button className="btn btn-info" key={id} onClick={(e)=>this.handleClick(id, e)}>
+						    <div className="module hero">
+						      <h4 >{heroes.byId[id].name}</h4>
+						    </div>
+					  	</button>
+				  	</div>
 					)}		    
 		    </div>
 		  </div>

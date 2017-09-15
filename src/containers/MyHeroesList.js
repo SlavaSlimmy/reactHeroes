@@ -24,9 +24,9 @@ class MyHeroesList extends Component {
     const { heroes , actions } = this.props
     const selectedHero = (heroes.byId[heroes.selectedHero])? heroes.byId[heroes.selectedHero]: null
     return (
-      <div>
+      <div className="heroes-list">
         {heroes.allIds.length > 0 &&
-          <div>
+          <div className="row">
             <HeroesList 
             heroes={heroes} actions={actions}
              />

@@ -6,11 +6,11 @@ export default class SelectedHero extends Component {
 		const { hero, onClick } = this.props
 
 		return (
-			<div>
+			<div className="selected-hero">
 	        {hero &&
 				<div>
 				    <h2>{hero.name} is my hero</h2>
-				    <button onClick={onClick}>View Details</button>
+				    <button className="btn btn-lg btn-info" onClick={onClick}>View Details</button>
 			    </div>
 	        }
 	        </div>			

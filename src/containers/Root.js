@@ -32,7 +32,7 @@ export default class Root extends Component {
   render() {
     return (
       <Provider store={store}>
-      	<div> 
+      <div className="container-fluid"> 
 		    <Header />
 		    <ConnectedRouter history={history}>
 		      <Switch>

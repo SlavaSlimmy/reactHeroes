@@ -13,12 +13,12 @@ class Header extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="header">
 			    <h1>Tour of Heroes</h1>
-			    <nav>
-			      <button onClick={() => this.handleClick('/')}>Dashboard</button>
-			      <button onClick={() => this.handleClick('/heroes')}>Heroes</button>
-			    </nav>
+			    <div className="btn-group">
+			      <button className="btn btn-lg btn-width150 btn-primary" onClick={() => this.handleClick('/')}>Dashboard</button>
+			      <button className="btn btn-lg btn-width150 btn-primary" onClick={() => this.handleClick('/heroes')}>Heroes</button>
+			    </div>
 		    </div>
 		)
 	}

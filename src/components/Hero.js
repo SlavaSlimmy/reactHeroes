@@ -15,7 +15,7 @@ export default class Hero extends Component {
 		  onClick={ (e) => {e.stopPropagation();toggleHero(hero.id)}}>
 		    <span className="badge">{hero.id}</span> 
 		    <span>{hero.name}</span>
-		    <button className="delete" onClick={(e) => {e.stopPropagation();deleteHero(hero.id)}}>x</button>
+		    <button className="btn btn-danger delete" onClick={(e) => {e.stopPropagation();deleteHero(hero.id)}}>×</button>
 		  </li>
 		)
 	}

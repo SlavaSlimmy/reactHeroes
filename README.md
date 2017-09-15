@@ -1,5 +1,5 @@
 # Tour of Heroes react/redux 
-React/Redux version of Angular tutorial [Tour of Heroes](https://angular.io/tutorial)
+React/Redux version of Angular tutorial [Tour of Heroes](https://angular.io/tutorial)<br>
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). This is eject version.
 
 # Install

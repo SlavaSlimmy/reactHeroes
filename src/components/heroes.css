@@ -1,23 +1,29 @@
-.selected {
-  background-color: #CFD8DC !important;
-  color: white;
+.heroes-list h2 {
+  text-align: center;
 }
+
 .heroes {
-  margin: 0 0 2em 0;
+  margin: 0 auto 2em;
   list-style-type: none;
   padding: 0;
-  width: 15em;
+  width: 100%;
+  max-width: 450px;
 }
+
 .heroes li {
   cursor: pointer;
   position: relative;
   left: 0;
   background-color: #EEE;
   margin: .5em;
-  padding: 0;
-  height: 2.2em;
+  padding: 0 40px 0px 0px;
+  height: 40px;
   border-radius: 4px;
-  line-height: 2.2;
+  line-height: 40px;
+}
+.heroes li.selected {
+  background-color: #CFD8DC !important;
+  color: white;
 }
 .heroes li:hover {
   color: #607D8B;
@@ -39,22 +45,23 @@
   display: inline-block;
   font-size: small;
   color: white;
-  padding: 0 0.7em;
+  padding: 0 0.9em;
   background-color: #607D8B;
-  line-height: 2.4;
+  line-height: 40px;
   position: relative;
   height: 100%;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
   vertical-align: top;
 }
-button.delete {
-  float:right;
-  margin-top: 2px;
-  margin-right: .5em;
-  background-color: gray !important;
-  color:white;
-  height: 2em;
-  width: 2em;
-  line-height: 1em;
+.btn.delete {
+  position: absolute;
+  right: 5px;
+  top:4px;
+  height: 32px;
+  width: 32px;
+  line-height: 30px;
+  padding: 0px;
+  font-size: 20px;
+  
 }

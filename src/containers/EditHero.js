@@ -20,11 +20,11 @@ class EditHero extends Component {
     const { heroes, editHero, dispatch } = this.props
     const selectedHero = (heroes.byId[heroes.selectedHero])? heroes.byId[heroes.selectedHero]: null
     return (
-      <div>
+      <div className="edit-hero">
         {selectedHero &&
-          <div>
+          <div className="row">
             <h2>{selectedHero.name} details</h2>
-            <form onSubmit={e => {
+            <form className="form-horizontal" onSubmit={e => {
               e.preventDefault()
               if (!input.value.trim()) {
                 return
@@ -32,18 +32,22 @@ class EditHero extends Component {
               dispatch(editHero(selectedHero.id, input.value))
               dispatch(push('/heroes'))
             }}>
-              <div>
-                <label>ID:</label>
-                <span>{selectedHero.id}</span>
+              <div className="form-group form-group-lg">
+                <label className="col-sm-2 control-label">ID:</label>
+                <div className="col-sm-10">
+                  <p className="form-control-static">{selectedHero.id}</p>
+                </div>                
               </div>            
-              <div>
-                <label>Name:</label>
-                <input defaultValue={selectedHero.name} ref={node => { input = node }} />
+              <div className="form-group form-group-lg">
+                <label className="col-sm-2 control-label">Name:</label>
+                <div className="col-sm-10">
+                  <input className="form-control" defaultValue={selectedHero.name} ref={node => { input = node }} />
+                </div>
               </div>
-              <nav>
-                <button onClick={this.handleBack}>Back</button>
-                <button type="submit">Save</button>
-              </nav>
+              <div className="edit-hero__btns">
+                <button className="btn btn-lg btn-info" onClick={this.handleBack}>Back</button> 
+                <button className="btn btn-lg btn-info" type="submit">Save</button>
+              </div>
             </form>
           </div>
         }      
