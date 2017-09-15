@@ -10,7 +10,7 @@ import { routerMiddleware, ConnectedRouter } from 'react-router-redux'
 
 import { createLogger } from 'redux-logger'
 
-import Header from '../components/Header'
+import Header from './Header'
 import Dashboard from './Dashboard'
 import MyHeroesList from './MyHeroesList'
 import EditHero from './EditHero'

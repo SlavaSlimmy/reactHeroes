@@ -18,8 +18,8 @@ class Dashboard extends Component {
 		    <h2>Top Heroes</h2>
 		    <div className="row">
 		          {heroes.allIds.map(id =>
-		          	<div className="col-md-3">
-						<button className="btn btn-info" key={id} onClick={(e)=>this.handleClick(id, e)}>
+		          	<div key={id} className="col-md-3">
+						<button className="btn btn-info" onClick={(e)=>this.handleClick(id, e)}>
 						    <div className="module hero">
 						      <h4 >{heroes.byId[id].name}</h4>
 						    </div>
