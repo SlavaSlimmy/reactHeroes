@@ -1,0 +1,22 @@
+{
+	heroes: {
+		allIds: [11, 12, 13],
+		byId: {
+			11: {
+				id: 11,
+				name: 'Mr. Nice',
+		    },
+		    12: {
+				id: 12,
+				name: 'Narco',
+		    },
+		    13: {
+				id: 13,
+				name: 'Bombasto',
+		    }	    
+		},
+		selectedHero: 12
+	}
+
+	router: { pathname: '/'}
+}
