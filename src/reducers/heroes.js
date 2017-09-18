@@ -4,12 +4,18 @@ import mapValues from 'lodash/mapValues';
 import { TOGGLE_HERO, DELETE_HERO, ADD_HERO, EDIT_HERO } from '../constants/ActionTypes'
 
 const initialHeroes = {
-  allIds: [11, 12, 13, 14],
+  allIds: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
   byId: {
     11: {id: 11, name: 'Mr. Nice'},
     12: {id: 12, name: 'Narco'},
     13: {id: 13, name: 'Bombasto'},
-    14: {id: 14, name: 'Celeritas'}
+    14: {id: 14, name: 'Celeritas'},
+    15: {id: 15, name: 'Magneta'},
+    16: {id: 16, name: 'RubberMan'},
+    17: {id: 17, name: 'Dynama'},
+    18: {id: 18, name: 'Dr IQ'},
+    19: {id: 19, name: 'Magma'},
+    20: {id: 20, name: 'Tornado'}
   },
   selectedHero: 0
 }
@@ -54,36 +60,3 @@ export default function heroes(state  = initialHeroes, action) {
       return state
   }
 }
-
-
-// export default function heroes(state  = initialHEROES, action) {
-//   switch (action.type) {
-//     case TOGGLE_HERO:
-//       return state.map(hero =>
-//         hero.id === action.id ?
-//           { ...hero, selected: true } :
-//           { ...hero, selected: false }
-// 		)
-//     case DELETE_HERO:
-// 		return state.filter(hero =>
-// 		    hero.id !== action.id
-// 		)
-//     case ADD_HERO:
-//       return [
-//         ...state,
-//         {
-//           id: state.reduce((maxId, hero) => Math.max(hero.id, maxId), -1) + 1,
-//           name: action.name,
-//           selected: false
-//         }
-// 		]		
-//     case EDIT_HERO:
-//       return state.map(hero =>
-//         hero.id === action.id ?
-//           { ...hero, name: action.name } :
-//           hero
-//     )    
-//     default:
-//       return state
-//   }
-// }

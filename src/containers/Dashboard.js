@@ -13,11 +13,12 @@ class Dashboard extends Component {
 
 	render() {
 		const { heroes } = this.props
+		let heroesToView = heroes.allIds.slice(0, 4);
 		return (
 		  <div className="dashboard">
 		    <h2>Top Heroes</h2>
 		    <div className="row">
-		          {heroes.allIds.map(id =>
+		          {heroesToView.map(id =>
 		          	<div key={id} className="col-md-3">
 						<button className="btn btn-info" onClick={(e)=>this.handleClick(id, e)}>
 						    <div className="module hero">

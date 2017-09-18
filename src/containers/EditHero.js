@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { editHero }  from '../actions'
-import { push, goBack } from 'react-router-redux'
+import { goBack } from 'react-router-redux'
 
 class EditHero extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class EditHero extends Component {
                 return
               }
               dispatch(editHero(selectedHero.id, input.value))
-              dispatch(push('/heroes'))
+              dispatch(goBack())
             }}>
               <div className="form-group form-group-lg">
                 <label className="col-sm-2 control-label">ID:</label>
